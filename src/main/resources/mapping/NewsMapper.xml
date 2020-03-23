@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mini.miniapp.mapper.NewsMapper">
+  <resultMap id="BaseResultMap" type="com.mini.miniapp.pojo.News">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="type_id" jdbcType="VARCHAR" property="typeId" />
+    <result column="img_type" jdbcType="INTEGER" property="imgType" />
+    <result column="cover_img" jdbcType="VARCHAR" property="coverImg" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="publisher" jdbcType="VARCHAR" property="publisher" />
+    <result column="publisher_face" jdbcType="VARCHAR" property="publisherFace" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <select id="queryNewsById" parameterType="java.lang.String" resultType="com.mini.miniapp.pojo.News">
+    select * from news where type_id=#{typeID}
+
+  </select>
+</mapper>
