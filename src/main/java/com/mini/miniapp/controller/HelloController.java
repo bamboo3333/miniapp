@@ -22,12 +22,11 @@ public class HelloController {
     }*/
     @Resource
     private NewsService newsService;
-    @RequestMapping("/news/one")
+    @RequestMapping("/news/one.action")
     public MINIJSONResult query(){
         News news = newsService.queryNewsById("2001");
         MINIJSONResult ok = MINIJSONResult.ok(news);
         System.out.println(ok);
         return ok;
-
     }
 }

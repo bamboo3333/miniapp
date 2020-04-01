@@ -29,12 +29,16 @@ spring:
     multipart:
       enabled: true
       max-file-size: 5MB
-
   http:
     encoding:
       force: true
       charset: utf-8
       enabled: true
+  #配置View对象：prefix,suffix加载视图解析器需要的前缀和后缀，与ModelAndView一起使用
+  mvc:
+    view:
+        prefix: /jsp/
+        suffix: .jsp
   #Redis config
 #  redis:
 #    port: 6379
