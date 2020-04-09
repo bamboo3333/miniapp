@@ -4,13 +4,16 @@ import javax.persistence.*;
 
 public class News {
     @Id
-    private String id;
-
-    @Column(name = "type_id")
-    private String typeId;
+    private Integer id;
 
     /**
-     * 新闻列表显示模式：
+     * 0:实习生1:全职生2:招聘生
+     */
+    @Column(name = "type_id")
+    private Integer typeId;
+
+    /**
+     * 消息列表显示模式：
 0：纯文字，无图片
 1：有一张图片
 3：有三张图片
@@ -28,12 +31,12 @@ public class News {
     private String coverImg;
 
     /**
-     * 新闻标题
+     * 消息标题
      */
     private String title;
 
     /**
-     * 发布者
+     * 消息发布者
      */
     private String publisher;
 
@@ -50,45 +53,49 @@ public class News {
     private String createTime;
 
     /**
-     * 新闻内容
+     * 消息内容
      */
     private String content;
 
     /**
      * @return id
      */
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
     /**
      * @param id
      */
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * @return type_id
+     * 获取0:实习生1:全职生2:招聘生
+     *
+     * @return type_id - 0:实习生1:全职生2:招聘生
      */
-    public String getTypeId() {
+    public Integer getTypeId() {
         return typeId;
     }
 
     /**
-     * @param typeId
+     * 设置0:实习生1:全职生2:招聘生
+     *
+     * @param typeId 0:实习生1:全职生2:招聘生
      */
-    public void setTypeId(String typeId) {
+    public void setTypeId(Integer typeId) {
         this.typeId = typeId;
     }
 
     /**
-     * 获取新闻列表显示模式：
+     * 获取消息列表显示模式：
 0：纯文字，无图片
 1：有一张图片
 3：有三张图片
      *
-     * @return img_type - 新闻列表显示模式：
+     * @return img_type - 消息列表显示模式：
 0：纯文字，无图片
 1：有一张图片
 3：有三张图片
@@ -98,12 +105,12 @@ public class News {
     }
 
     /**
-     * 设置新闻列表显示模式：
+     * 设置消息列表显示模式：
 0：纯文字，无图片
 1：有一张图片
 3：有三张图片
      *
-     * @param imgType 新闻列表显示模式：
+     * @param imgType 消息列表显示模式：
 0：纯文字，无图片
 1：有一张图片
 3：有三张图片
@@ -143,36 +150,36 @@ public class News {
     }
 
     /**
-     * 获取新闻标题
+     * 获取消息标题
      *
-     * @return title - 新闻标题
+     * @return title - 消息标题
      */
     public String getTitle() {
         return title;
     }
 
     /**
-     * 设置新闻标题
+     * 设置消息标题
      *
-     * @param title 新闻标题
+     * @param title 消息标题
      */
     public void setTitle(String title) {
         this.title = title;
     }
 
     /**
-     * 获取发布者
+     * 获取消息发布者
      *
-     * @return publisher - 发布者
+     * @return publisher - 消息发布者
      */
     public String getPublisher() {
         return publisher;
     }
 
     /**
-     * 设置发布者
+     * 设置消息发布者
      *
-     * @param publisher 发布者
+     * @param publisher 消息发布者
      */
     public void setPublisher(String publisher) {
         this.publisher = publisher;
@@ -215,18 +222,18 @@ public class News {
     }
 
     /**
-     * 获取新闻内容
+     * 获取消息内容
      *
-     * @return content - 新闻内容
+     * @return content - 消息内容
      */
     public String getContent() {
         return content;
     }
 
     /**
-     * 设置新闻内容
+     * 设置消息内容
      *
-     * @param content 新闻内容
+     * @param content 消息内容
      */
     public void setContent(String content) {
         this.content = content;

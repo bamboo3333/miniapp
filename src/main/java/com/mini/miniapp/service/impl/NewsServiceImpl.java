@@ -5,6 +5,7 @@ import com.mini.miniapp.pojo.News;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author:guan
@@ -16,8 +17,14 @@ public class NewsServiceImpl implements com.mini.miniapp.service.NewsService {
     @Resource
     private NewsMapper newsMapper;
     @Override
-    public News queryNewsById(String typeId) {
-        News news = newsMapper.queryNewsById(typeId);
-        return news;
+    public List<News> queryNewsById(Integer typeId) {
+        List<News> newsList = newsMapper.queryNewsById(typeId);
+        return newsList;
+    }
+
+    @Override
+    public String saveNewsByTypeId(News news) {
+        newsMapper.saveNewsByTypeId(news);
+        return null;
     }
 }

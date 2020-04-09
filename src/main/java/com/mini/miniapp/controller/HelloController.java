@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author:guan
@@ -24,7 +25,7 @@ public class HelloController {
     private NewsService newsService;
     @RequestMapping("/news/one.action")
     public MINIJSONResult query(){
-        News news = newsService.queryNewsById("2001");
+        List<News> news = newsService.queryNewsById(1);
         MINIJSONResult ok = MINIJSONResult.ok(news);
         System.out.println(ok);
         return ok;
