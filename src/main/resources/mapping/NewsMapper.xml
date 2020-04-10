@@ -16,13 +16,25 @@
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
   <select id="queryNewsById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select * from news where type_id=#{typeId}
+    select * from news where id=#{id}
+  </select>
+  <select id="queryAllNews" resultMap="BaseResultMap">
+    select * from news
   </select>
   <insert id="saveNewsByTypeId" parameterType="com.mini.miniapp.pojo.News">
     insert  into news(type_id,img_type,cover_img,
                       title,publisher,publisher_face,content,create_time)values (
                       #{typeId},#{imgType},#{coverImg},#{title},#{publisher},#{publisherFace},
-                      #{createTime},#{content}
+                      #{content},#{createTime}
                       )
   </insert>
+  <update id="updateNewsById" parameterType="com.mini.miniapp.pojo.News">
+    update news set type_id=#{typeId},img_type=#{imgType},cover_img=#{coverImg},
+                    title=#{title},publisher=#{publisher},publisher_face=#{publisherFace},
+                    content=#{content},create_time=#{createTime}
+    where id=#{id}
+  </update>
+  <delete id="deleteNewsById" parameterType="java.lang.Integer">
+    delete from news where id=#{id}
+  </delete>
 </mapper>

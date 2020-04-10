@@ -12,8 +12,14 @@ import java.util.List;
  */
 
 public interface NewsService {
+    //查找多有信息
+    List<News> queryAllNews();
     //通过typeid查找消息
-    List<News> queryNewsById(Integer typeId);
+    News queryNewsById(Integer typeId);
     //添加新的信息
     String saveNewsByTypeId(News news);
+    //修改信息
+    String modifyNewsById(News news);
+    //删除指定信息
+    String deleteNewsById(Integer id);
 }

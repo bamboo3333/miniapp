@@ -25,7 +25,7 @@ public class HelloController {
     private NewsService newsService;
     @RequestMapping("/news/one.action")
     public MINIJSONResult query(){
-        List<News> news = newsService.queryNewsById(1);
+        News news = newsService.queryNewsById(1);
         MINIJSONResult ok = MINIJSONResult.ok(news);
         System.out.println(ok);
         return ok;

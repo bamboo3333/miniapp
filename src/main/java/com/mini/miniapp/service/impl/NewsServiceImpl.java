@@ -16,15 +16,33 @@ import java.util.List;
 public class NewsServiceImpl implements com.mini.miniapp.service.NewsService {
     @Resource
     private NewsMapper newsMapper;
+
     @Override
-    public List<News> queryNewsById(Integer typeId) {
-        List<News> newsList = newsMapper.queryNewsById(typeId);
-        return newsList;
+    public List<News> queryAllNews() {
+        return newsMapper.queryAllNews();
+    }
+
+    @Override
+    public News queryNewsById(Integer typeId) {
+        News news = newsMapper.queryNewsById(typeId);
+        return news;
     }
 
     @Override
     public String saveNewsByTypeId(News news) {
         newsMapper.saveNewsByTypeId(news);
+        return null;
+    }
+
+    @Override
+    public String modifyNewsById(News news) {
+        newsMapper.updateNewsById(news);
+        return null;
+    }
+
+    @Override
+    public String deleteNewsById(Integer id) {
+        newsMapper.deleteNewsById(id);
         return null;
     }
 }

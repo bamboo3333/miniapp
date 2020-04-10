@@ -6,6 +6,9 @@ import com.mini.miniapp.utils.MyMapper;
 import java.util.List;
 
 public interface NewsMapper{
-    List<News> queryNewsById(Integer typeId);
+    News queryNewsById(Integer id);
     void saveNewsByTypeId(News news);
+    List<News> queryAllNews();
+    void updateNewsById(News news);
+    void deleteNewsById(Integer id);
 }
