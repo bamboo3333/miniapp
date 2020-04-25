@@ -12,20 +12,9 @@ public class News {
     @Column(name = "type_id")
     private Integer typeId;
 
-    /**
-     * 消息列表显示模式：
-0：纯文字，无图片
-1：有一张图片
-3：有三张图片
-     */
-    @Column(name = "img_type")
-    private Integer imgType;
 
     /**
-     * 如果img_type为1或者3的话，本字段必填。
-是一个json数组
-['']
-['','','']
+     公司图片url
      */
     @Column(name = "cover_img")
     private String coverImg;
@@ -36,27 +25,14 @@ public class News {
     private String title;
 
     /**
-     * 消息发布者
+     * 招聘公司
      */
     private String publisher;
 
     /**
-     * 发布者头像
+     * 招聘内容Url
      */
-    @Column(name = "publisher_face")
-    private String publisherFace;
-
-    /**
-     * 发布时间
-     */
-    @Column(name = "create_time")
-    private String createTime;
-
-    /**
-     * 消息内容
-     */
-    private String content;
-
+    private String contentUrl;
     /**
      * @return id
      */
@@ -89,47 +65,7 @@ public class News {
         this.typeId = typeId;
     }
 
-    /**
-     * 获取消息列表显示模式：
-0：纯文字，无图片
-1：有一张图片
-3：有三张图片
-     *
-     * @return img_type - 消息列表显示模式：
-0：纯文字，无图片
-1：有一张图片
-3：有三张图片
-     */
-    public Integer getImgType() {
-        return imgType;
-    }
 
-    /**
-     * 设置消息列表显示模式：
-0：纯文字，无图片
-1：有一张图片
-3：有三张图片
-     *
-     * @param imgType 消息列表显示模式：
-0：纯文字，无图片
-1：有一张图片
-3：有三张图片
-     */
-    public void setImgType(Integer imgType) {
-        this.imgType = imgType;
-    }
-
-    /**
-     * 获取如果img_type为1或者3的话，本字段必填。
-是一个json数组
-['']
-['','','']
-     *
-     * @return cover_img - 如果img_type为1或者3的话，本字段必填。
-是一个json数组
-['']
-['','','']
-     */
     public String getCoverImg() {
         return coverImg;
     }
@@ -185,57 +121,12 @@ public class News {
         this.publisher = publisher;
     }
 
-    /**
-     * 获取发布者头像
-     *
-     * @return publisher_face - 发布者头像
-     */
-    public String getPublisherFace() {
-        return publisherFace;
+    public String getContentUrl() {
+        return contentUrl;
     }
 
-    /**
-     * 设置发布者头像
-     *
-     * @param publisherFace 发布者头像
-     */
-    public void setPublisherFace(String publisherFace) {
-        this.publisherFace = publisherFace;
+    public void setContentUrl(String contentUrl) {
+        this.contentUrl = contentUrl;
     }
 
-    /**
-     * 获取发布时间
-     *
-     * @return create_time - 发布时间
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * 设置发布时间
-     *
-     * @param createTime 发布时间
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * 获取消息内容
-     *
-     * @return content - 消息内容
-     */
-    public String getContent() {
-        return content;
-    }
-
-    /**
-     * 设置消息内容
-     *
-     * @param content 消息内容
-     */
-    public void setContent(String content) {
-        this.content = content;
-    }
 }

@@ -23,7 +23,7 @@ public class HelloController {
     }*/
     @Resource
     private NewsService newsService;
-    @RequestMapping("/news/one.action")
+    @RequestMapping("/news/one")
     public MINIJSONResult query(){
         News news = newsService.queryNewsById(1);
         MINIJSONResult ok = MINIJSONResult.ok(news);

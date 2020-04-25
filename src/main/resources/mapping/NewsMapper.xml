@@ -7,13 +7,10 @@
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="type_id" jdbcType="INTEGER" property="typeId" />
-    <result column="img_type" jdbcType="INTEGER" property="imgType" />
     <result column="cover_img" jdbcType="VARCHAR" property="coverImg" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="publisher" jdbcType="VARCHAR" property="publisher" />
-    <result column="publisher_face" jdbcType="VARCHAR" property="publisherFace" />
-    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
-    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="content_url" jdbcType="VARCHAR" property="contentUrl"/>
   </resultMap>
   <select id="queryNewsById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from news where id=#{id}
@@ -22,16 +19,16 @@
     select * from news
   </select>
   <insert id="saveNewsByTypeId" parameterType="com.mini.miniapp.pojo.News">
-    insert  into news(type_id,img_type,cover_img,
-                      title,publisher,publisher_face,content,create_time)values (
-                      #{typeId},#{imgType},#{coverImg},#{title},#{publisher},#{publisherFace},
-                      #{content},#{createTime}
+    insert  into news(type_id,cover_img,
+                      title,publisher,content_url)values (
+                      #{typeId},#{coverImg},#{title},#{publisher},
+                      #{contentUrl}
                       )
   </insert>
   <update id="updateNewsById" parameterType="com.mini.miniapp.pojo.News">
-    update news set type_id=#{typeId},img_type=#{imgType},cover_img=#{coverImg},
-                    title=#{title},publisher=#{publisher},publisher_face=#{publisherFace},
-                    content=#{content},create_time=#{createTime}
+    update news set type_id=#{typeId},cover_img=#{coverImg},
+                    title=#{title},publisher=#{publisher},
+                    content_url=#{contentUrl}
     where id=#{id}
   </update>
   <delete id="deleteNewsById" parameterType="java.lang.Integer">
