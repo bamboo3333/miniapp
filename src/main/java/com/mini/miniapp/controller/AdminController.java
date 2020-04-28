@@ -49,6 +49,6 @@ public class AdminController{
      */
     public String logout(HttpServletRequest httpServletRequest){
         httpServletRequest.getSession().setAttribute("usersession",null);
-        return "menu";
+        return "login";
     }
 }

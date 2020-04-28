@@ -7,11 +7,10 @@
     <groupId>com.lib</groupId>
     <artifactId>miniapp</artifactId>
     <packaging>war</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>miniapp</name>
-    <description>微信小程序设计大赛-实习通</description>
-
+    <description>微信小程序设计大赛-Offer直通车</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
