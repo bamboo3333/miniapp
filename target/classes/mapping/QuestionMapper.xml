@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mini.miniapp.mapper.QuestionMapper">
+  <resultMap id="BaseResultMap" type="com.mini.miniapp.pojo.Question">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title_id" jdbcType="VARCHAR" property="titleId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="title_desc" jdbcType="VARCHAR" property="titleDesc" />
+    <result column="title_iead" jdbcType="VARCHAR" property="titleIead" />
+    <result column="finish_time" jdbcType="DATE" property="finishTime" />
+  </resultMap>
+<!--  查询所有题目记录-->
+  <select id="queryAllQues" resultMap="BaseResultMap">
+    select * from question
+  </select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mini.miniapp.mapper.UserinfoMapper">
+  <resultMap id="BaseResultMap" type="com.mini.miniapp.pojo.Userinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+    <result column="user_avatar" jdbcType="VARCHAR" property="userAvatar" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+  </resultMap>
+  <!--  查找所有用户信息-->
+  <select id="queryAllUser" resultMap="BaseResultMap">
+    select * from userinfo
+  </select>
+<!--  统计用户个数-->
+  <select id="countUserNum" resultType="java.lang.Integer">
+    select count(*) from userinfo
+  </select>
+</mapper>

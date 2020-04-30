@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mini.miniapp.mapper.ResumemodelMapper">
+  <resultMap id="BaseResultMap" type="com.mini.miniapp.pojo.Resumemodel">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="resume_type" jdbcType="VARCHAR" property="resumeType" />
+    <result column="fit_crowd" jdbcType="VARCHAR" property="fitCrowd" />
+    <result column="model_url" jdbcType="VARCHAR" property="modelUrl" />
+  </resultMap>
+  <select id="queryAllResume" resultMap="BaseResultMap">
+    select * from resumemodel
+  </select>
+</mapper>
