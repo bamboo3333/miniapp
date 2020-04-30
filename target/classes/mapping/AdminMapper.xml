@@ -9,4 +9,6 @@
     <select id="login" parameterType="com.mini.miniapp.pojo.Administrator" resultMap="BaseResultMap">
         select * from administrator where admin_name=#{adminName} and admin_password=#{adminPassword}
     </select>
+
+
 </mapper>

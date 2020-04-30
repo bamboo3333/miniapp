@@ -31,7 +31,7 @@
 <!--		<table tableName="news"></table>-->
 		<table tableName="question"></table>
 		<table tableName="writtentrain"></table>
-		<table tableName="user"></table>
+		<table tableName="userinfo"></table>
 		<table tableName="resumemodel"></table>
 
     </context>

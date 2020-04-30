@@ -31,12 +31,16 @@
             color: white;
         }
         body{
-            background-color: black;
+            background-color: #343A40;
+        }
+        h3{
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-<h1>招聘信息列表</h1>
+<h3>招聘信息列表</h3>
 <br>
 <table class="table table-hover table-dark table-striped" id="assessStage" data-height="467" data-mobile-responsive="true" style="table-layout: fixed;">
     <thead class="thead-dark w-100 ">
@@ -63,6 +67,5 @@
     </c:forEach>
     </tbody>
 </table>
-
 </body>
 </html>
