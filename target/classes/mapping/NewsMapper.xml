@@ -10,7 +10,13 @@
     <result column="cover_img" jdbcType="VARCHAR" property="coverImg" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="publisher" jdbcType="VARCHAR" property="publisher" />
-    <result column="content_url" jdbcType="VARCHAR" property="contentUrl"/>
+    <result column="today_news" jdbcType="INTEGER" property="todayNews" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="desc" jdbcType="VARCHAR" property="desc" />
+    <result column="work_type" jdbcType="VARCHAR" property="workType" />
+    <result column="job_desc" jdbcType="LONGVARCHAR" property="jobDesc" />
+    <result column="job_req" jdbcType="LONGVARCHAR" property="jobReq" />
+    <result column="company_desc" jdbcType="LONGVARCHAR" property="companyDesc" />
   </resultMap>
   <select id="queryNewsById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from news where id=#{id}
@@ -18,17 +24,29 @@
   <select id="queryAllNews" resultMap="BaseResultMap">
     select * from news
   </select>
+  <select id="queryNewsByType" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from news where type_id=#{typeId}
+  </select>
+  <select id="queryTodayNews" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from news where today_news=#{type}
+  </select>
+  <select id="countJobType" resultType="com.mini.miniapp.pojo.JobStatistics">
+    SELECT TYPE,COUNT(TYPE) as jobNum FROM news GROUP BY TYPE;
+  </select>
+  <select id="countCompany" resultType="com.mini.miniapp.pojo.CompanyStatistics">
+    SELECT publisher AS comName,COUNT(publisher) AS comNum FROM news GROUP BY publisher;
+  </select>
   <insert id="saveNewsByTypeId" parameterType="com.mini.miniapp.pojo.News">
-    insert  into news(type_id,cover_img,
-                      title,publisher,content_url)values (
+    insert  into news(type_id,cover_img,title,publisher,`type`,`desc`,work_type,job_desc,job_req,company_desc) values (
                       #{typeId},#{coverImg},#{title},#{publisher},
-                      #{contentUrl}
+                      #{type},#{desc},#{workType},#{jobDesc},#{jobReq},#{companyDesc}
                       )
   </insert>
   <update id="updateNewsById" parameterType="com.mini.miniapp.pojo.News">
     update news set type_id=#{typeId},cover_img=#{coverImg},
                     title=#{title},publisher=#{publisher},
-                    content_url=#{contentUrl}
+                    `type`=#{type},`desc`=#{desc},work_type=#{workType},
+                    job_desc=#{jobDesc},job_req=#{jobReq},company_desc=#{companyDesc}
     where id=#{id}
   </update>
   <delete id="deleteNewsById" parameterType="java.lang.Integer">

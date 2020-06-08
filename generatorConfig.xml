@@ -28,7 +28,7 @@
         <javaClientGenerator targetPackage="com.mini.miniapp.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
 
-<!--		<table tableName="news"></table>-->
+		<table tableName="news"></table>
 		<table tableName="question"></table>
 		<table tableName="writtentrain"></table>
 		<table tableName="userinfo"></table>

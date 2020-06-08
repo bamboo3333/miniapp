@@ -38,4 +38,9 @@ public class LoginFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
 
     }
+
+    @Override
+    public void destroy() {
+
+    }
 }

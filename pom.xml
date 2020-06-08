@@ -7,7 +7,7 @@
     <groupId>com.lib</groupId>
     <artifactId>miniapp</artifactId>
     <packaging>war</packaging>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
     <name>miniapp</name>
     <description>微信小程序设计大赛-Offer直通车</description>
@@ -79,6 +79,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -92,6 +93,7 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jsp-api</artifactId>
+            <version>9.0.31</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

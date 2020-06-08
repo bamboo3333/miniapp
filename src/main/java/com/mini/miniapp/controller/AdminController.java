@@ -37,16 +37,13 @@ public class AdminController{
         if (null!=administrator){
             //返回值不为空，跳转到success界面
             httpServletRequest.getSession().setAttribute("usersession",administrator.getAdminName());
-            return "menu";
+            return "redirect:/jsp/data.jsp";
         }else {
             //登陆失败，重新登陆
             return "login";
         }
     }
     @RequestMapping(value = "/admin/logout.action")
-    /*
-    获取方式2，定义对象，jsp中的属性和对象属性名一致
-     */
     public String logout(HttpServletRequest httpServletRequest){
         httpServletRequest.getSession().setAttribute("usersession",null);
         return "login";

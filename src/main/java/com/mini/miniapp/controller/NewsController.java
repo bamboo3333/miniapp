@@ -30,7 +30,7 @@ public class NewsController {
         modelAndView.addObject("newsList",newsList);
         //添加跳转路径
         //显示jsp/demo2.jsp页面
-        modelAndView.setViewName("/news/newsList");
+        modelAndView.setViewName("news/newsList");
 
         return modelAndView;
     }
@@ -38,7 +38,6 @@ public class NewsController {
     @RequestMapping("/news/save.action")
     public String saveNewsTypeId(News news){
         newsService.saveNewsByTypeId(news);
-
         return "redirect:/news/info.action";
     }
 
@@ -70,7 +69,6 @@ public class NewsController {
     //更新信息更改聂荣
     @RequestMapping("/news/newsModify.action")
     public String modifyNewsById(News news){
-        System.out.println(news.getId());
         newsService.modifyNewsById(news);
         return "redirect:/news/info.action";
     }
