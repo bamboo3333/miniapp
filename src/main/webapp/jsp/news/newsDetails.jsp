@@ -49,7 +49,32 @@
     </tr>
     <tr>
         <td class="text-center">
-            ${ newsDetails.contentUrl}
+            ${ newsDetails.type}
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center">
+            ${ newsDetails.desc}
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center">
+            ${ newsDetails.workType}
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center">
+            ${ newsDetails.jobDesc}
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center">
+            ${ newsDetails.jobReq}
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center">
+            ${ newsDetails.companyDesc}
         </td>
     </tr>
     </tbody>

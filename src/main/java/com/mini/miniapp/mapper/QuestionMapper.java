@@ -5,6 +5,6 @@ import com.mini.miniapp.utils.MyMapper;
 
 import java.util.List;
 
-public interface QuestionMapper {
+public interface QuestionMapper extends MyMapper<Question> {
     List<Question> queryAllQues();
 }
