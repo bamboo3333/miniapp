@@ -219,6 +219,9 @@
     }
 </script>
 <script type="text/javascript">
+    var posName = [],posNum = [];
+    var color = ['#DD2222','#3FA7DC','#61A0A8','#57C43C','#C4C43C'];
+    var i = 0;
     var dom = document.getElementById("job_type");
     var myChart = echarts.init(dom);
     var app = {};
@@ -239,11 +242,11 @@
         legend: {
             orient: 'vertical',
             left: 10,
-            data: [ {name:'研发岗',textStyle:{color:'#FFFFFF'}},
-                    {name:'开发岗',textStyle:{color:'#FFFFFF'}},
-                    {name:'前端',textStyle:{color:'#FFFFFF'}},
-                    {name:'后端',textStyle:{color:'#FFFFFF'}},
-                    {name:'Java',textStyle:{color:'#FFFFFF'}},]
+            data: [
+                <c:forEach items="${positions}" var="position">
+                    {name:'${position.key}',textStyle:{color:'#FFFFFF'}},
+                </c:forEach>
+            ]
         },
         series: [
             {
@@ -266,11 +269,10 @@
                     show: false
                 },
                 data: [
-                    {value: 335, name: '研发岗',itemStyle:{color:'#DD2222'}},
-                    {value: 310, name: '开发岗',itemStyle:{color:'#3FA7DC'}},
-                    {value: 234, name: '前端',itemStyle:{color:'#61A0A8'}},
-                    {value: 135, name: '后端',itemStyle:{color:'#57C43C'}},
-                    {value: 1548, name: 'Java',itemStyle:{color:'#C4C43C'}}
+                    <c:forEach items="${positions}" var="position">
+                    {value: ${position.value}, name: '${position.key}',itemStyle:{color:color[i]}},
+                    i++,
+                    </c:forEach>
                 ]
             }
         ]

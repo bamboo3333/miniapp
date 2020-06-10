@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mini.miniapp.mapper.WrittentrainMapper">
+  <resultMap id="BaseResultMap" type="com.mini.miniapp.pojo.Writtentrain">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title_id" jdbcType="VARCHAR" property="titleId" />
+    <result column="title_type" jdbcType="VARCHAR" property="titleType" />
+    <result column="title_desc" jdbcType="VARCHAR" property="titleDesc" />
+    <result column="title_url" jdbcType="VARCHAR" property="titleUrl" />
+  </resultMap>
+</mapper>

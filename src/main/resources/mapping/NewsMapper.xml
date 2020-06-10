@@ -36,6 +36,9 @@
   <select id="countCompany" resultType="com.mini.miniapp.pojo.CompanyStatistics">
     SELECT publisher AS comName,COUNT(publisher) AS comNum FROM news GROUP BY publisher;
   </select>
+  <select id="countPosition" resultType="java.lang.String">
+    select title from news
+  </select>
   <insert id="saveNewsByTypeId" parameterType="com.mini.miniapp.pojo.News">
     insert  into news(type_id,cover_img,title,publisher,`type`,`desc`,work_type,job_desc,job_req,company_desc) values (
                       #{typeId},#{coverImg},#{title},#{publisher},

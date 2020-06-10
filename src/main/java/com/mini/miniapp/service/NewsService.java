@@ -31,6 +31,7 @@ public interface NewsService {
     List<JobStatistics> countJobType();
     //招聘公司统计
     List<CompanyStatistics> countCompany();
+    List<String> countPosition();
 
 
 }
