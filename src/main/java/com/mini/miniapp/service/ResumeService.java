@@ -10,5 +10,5 @@ import java.util.List;
  * 文件信息：
  */
 public interface ResumeService {
-    List<Resumemodel> queryAllResume();
+    List<Resumemodel> queryAllResume(Integer typeId);
 }

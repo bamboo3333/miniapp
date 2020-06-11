@@ -16,16 +16,22 @@ public class Resumemodel {
     private String resumeType;
 
     /**
-     * 适合人群(实习生，兼职生，全职生)
+     * 适合人群(0实习生，2兼职生，1全职生)
      */
     @Column(name = "fit_crowd")
-    private String fitCrowd;
+    private Integer fitCrowd;
 
     /**
      * 模板url
      */
     @Column(name = "model_url")
     private String modelUrl;
+
+    /**
+     * 模板缩放图像
+     */
+    @Column(name = "model_img")
+    private String modelImg;
 
     /**
      * 获取简历模板自身id
@@ -64,20 +70,20 @@ public class Resumemodel {
     }
 
     /**
-     * 获取适合人群(实习生，兼职生，全职生)
+     * 获取适合人群(0实习生，2兼职生，1全职生)
      *
-     * @return fit_crowd - 适合人群(实习生，兼职生，全职生)
+     * @return fit_crowd - 适合人群(0实习生，2兼职生，1全职生)
      */
-    public String getFitCrowd() {
+    public Integer getFitCrowd() {
         return fitCrowd;
     }
 
     /**
-     * 设置适合人群(实习生，兼职生，全职生)
+     * 设置适合人群(0实习生，2兼职生，1全职生)
      *
-     * @param fitCrowd 适合人群(实习生，兼职生，全职生)
+     * @param fitCrowd 适合人群(0实习生，2兼职生，1全职生)
      */
-    public void setFitCrowd(String fitCrowd) {
+    public void setFitCrowd(Integer fitCrowd) {
         this.fitCrowd = fitCrowd;
     }
 
@@ -97,5 +103,23 @@ public class Resumemodel {
      */
     public void setModelUrl(String modelUrl) {
         this.modelUrl = modelUrl;
+    }
+
+    /**
+     * 获取模板缩放图像
+     *
+     * @return model_img - 模板缩放图像
+     */
+    public String getModelImg() {
+        return modelImg;
+    }
+
+    /**
+     * 设置模板缩放图像
+     *
+     * @param modelImg 模板缩放图像
+     */
+    public void setModelImg(String modelImg) {
+        this.modelImg = modelImg;
     }
 }

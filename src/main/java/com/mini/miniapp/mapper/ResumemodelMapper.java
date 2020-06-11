@@ -6,5 +6,5 @@ import com.mini.miniapp.utils.MyMapper;
 import java.util.List;
 
 public interface ResumemodelMapper extends MyMapper<Resumemodel> {
-    List<Resumemodel> queryAllResume();
+    List<Resumemodel> queryAllResume(Integer typeId);
 }

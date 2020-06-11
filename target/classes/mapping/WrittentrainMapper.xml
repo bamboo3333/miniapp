@@ -10,5 +10,13 @@
     <result column="title_type" jdbcType="VARCHAR" property="titleType" />
     <result column="title_desc" jdbcType="VARCHAR" property="titleDesc" />
     <result column="title_url" jdbcType="VARCHAR" property="titleUrl" />
+    <result column="title_name" jdbcType="VARCHAR" property="titleName" />
+    <result column="title_time" jdbcType="INTEGER" property="titleTime" />
+    <result column="title_img" jdbcType="VARCHAR" property="titleImg" />
+    <result column="title_exp" jdbcType="LONGVARCHAR" property="titleExp" />
+    <result column="title_remark" jdbcType="LONGVARCHAR" property="titleRemark" />
   </resultMap>
+  <select id="queryAll" resultMap="BaseResultMap">
+    select * from writtentrain
+  </select>
 </mapper>

@@ -18,8 +18,8 @@ public class ResumeServiceImpl implements ResumeService {
     @Resource
     private ResumemodelMapper resumemodelMapper;
     @Override
-    public List<Resumemodel> queryAllResume() {
+    public List<Resumemodel> queryAllResume(Integer typeId) {
 
-        return resumemodelMapper.queryAllResume();
+        return resumemodelMapper.queryAllResume(typeId);
     }
 }

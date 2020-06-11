@@ -7,10 +7,11 @@
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="resume_type" jdbcType="VARCHAR" property="resumeType" />
-    <result column="fit_crowd" jdbcType="VARCHAR" property="fitCrowd" />
+    <result column="fit_crowd" jdbcType="INTEGER" property="fitCrowd" />
     <result column="model_url" jdbcType="VARCHAR" property="modelUrl" />
+    <result column="model_img" jdbcType="VARCHAR" property="modelImg" />
   </resultMap>
-  <select id="queryAllResume" resultMap="BaseResultMap">
-    select * from resumemodel
+  <select id="queryAllResume" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from resumemodel where fit_crowd=#{id}
   </select>
 </mapper>
