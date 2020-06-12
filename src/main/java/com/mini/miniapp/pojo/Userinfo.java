@@ -7,21 +7,17 @@ public class Userinfo {
     private Integer id;
 
     @Id
-    @Column(name = "user_id")
-    private String userId;
+    private String openid;
 
     @Column(name = "user_name")
     private String userName;
-
-    @Column(name = "user_password")
-    private String userPassword;
 
     @Column(name = "user_avatar")
     private String userAvatar;
 
     private String sex;
 
-    private String phone;
+    private String address;
 
     /**
      * @return id
@@ -38,17 +34,17 @@ public class Userinfo {
     }
 
     /**
-     * @return user_id
+     * @return openid
      */
-    public String getUserId() {
-        return userId;
+    public String getOpenid() {
+        return openid;
     }
 
     /**
-     * @param userId
+     * @param openid
      */
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setOpenid(String openid) {
+        this.openid = openid;
     }
 
     /**
@@ -63,20 +59,6 @@ public class Userinfo {
      */
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    /**
-     * @return user_password
-     */
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    /**
-     * @param userPassword
-     */
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
     }
 
     /**
@@ -108,16 +90,16 @@ public class Userinfo {
     }
 
     /**
-     * @return phone
+     * @return address
      */
-    public String getPhone() {
-        return phone;
+    public String getAddress() {
+        return address;
     }
 
     /**
-     * @param phone
+     * @param address
      */
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

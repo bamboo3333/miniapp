@@ -6,6 +6,9 @@ import com.mini.miniapp.utils.MyMapper;
 import java.util.List;
 
 public interface UserinfoMapper extends MyMapper<Userinfo> {
-    Integer countUserNum();
     List<Userinfo> queryAllUser();
+
+    Integer countUserNum();
+    Integer queryUserById(String id);
+    void insertUser(Userinfo userinfo);
 }

@@ -12,4 +12,6 @@ import java.util.List;
 public interface UserService {
     List<Userinfo> selectAllUsers();
     Integer countUserNum();
+    void insertUser(Userinfo userinfo);
+    Integer queryUserById(String id);
 }
