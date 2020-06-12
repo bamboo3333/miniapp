@@ -42,7 +42,7 @@ public class NewsMiniController {
      */
     @RequestMapping("/news/jobInfo")
     public MINIJSONResult queryNewsByType(Integer typeId){
-        System.out.println(typeId);
+//        System.out.println(typeId);
         List<News> newsList = newsService.queryNewsByType(typeId);
         if (null!=newsList){
             MINIJSONResult ok = MINIJSONResult.ok(newsList);

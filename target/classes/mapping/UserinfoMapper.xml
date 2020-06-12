@@ -6,12 +6,11 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
-    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <id column="openid" jdbcType="VARCHAR" property="openid" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
-    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="user_avatar" jdbcType="VARCHAR" property="userAvatar" />
     <result column="sex" jdbcType="VARCHAR" property="sex" />
-    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
   </resultMap>
   <!--  查找所有用户信息-->
   <select id="queryAllUser" resultMap="BaseResultMap">
@@ -20,5 +19,14 @@
 <!--  统计用户个数-->
   <select id="countUserNum" resultType="java.lang.Integer">
     select count(*) from userinfo
+  </select>
+<!--  根据openid查找user-->
+  <select id="queryUserById" resultType="java.lang.Integer" parameterType="java.lang.String">
+    select id from userinfo where openid=#{openid}
+  </select>
+  <select id="insertUser" parameterType="com.mini.miniapp.pojo.Userinfo">
+    insert into userinfo (openid,user_name,user_avatar,sex,address) values (
+        #{openid},#{userName},#{userAvatar},#{sex},#{address}
+    )
   </select>
 </mapper>
