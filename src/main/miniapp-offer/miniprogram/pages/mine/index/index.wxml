@@ -1,0 +1,18 @@
+<!-- 资讯详情 -->
+<view class="container">
+	<view class="mine">
+		<view class="avatar">
+			<image src="../../../images/mine/mine-avatar.jpg" />
+		</view>
+		<view class="personInfo">
+			<image src="../../../images/mine/mine.png" mode="widthFix" style="width:18%" />
+			<view>
+				<view>昵称：阳墨余</view>
+				<view class="acount">账号：1234</view>
+				<view class="email">邮箱：1234@qq.com</view>
+			</view>
+		</view>
+		<view class="content">
+		</view>
+	</view>
+</view>

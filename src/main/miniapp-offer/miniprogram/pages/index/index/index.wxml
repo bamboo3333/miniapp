@@ -1,0 +1,86 @@
+<!-- 招聘资讯的首页 -->
+<view>
+	<view class="container">
+		<!-- 头部展示 -->
+		<view class="header">
+			<image class="header-background" src="../../../images/hire-new/new-header.png" />
+		</view>
+		<view class="search">
+			<view class="search-icon">
+				<image src="../../../images/hire-new/search.png" />
+			</view>
+			<view class="search-input">
+				<input class="search-input"></input>
+			</view>
+		</view>
+		<!-- 设置招聘类别设置 -->
+		<view class="hireType">
+			<!-- 招聘类别展示 -->
+			<navigator class="hire-trainee" url="../trainee/trainee">
+				<image src="../../../images/hire-new/trainee-default.png" />
+				<text>实习生</text>
+			</navigator>
+			<navigator class="hire-fullTime" url="../fullTime/fullTime">
+				<image src="../../../images/hire-new/fullTime-default.png" />
+				<text>全职</text>
+			</navigator>
+			<navigator class="hire-partTimeJob" url="../partTimeJob/partTimeJob">
+				<image src="../../../images/hire-new/partTimeJob-default.png" />
+				<text>兼职</text>
+			</navigator>
+		</view>
+		<!-- 设置推荐招聘标题 -->
+		<view class="hire-Title">
+			<view class="Chinese-title">热门推荐</view>
+			<view class="English-title">Hot recommendations</view>
+		</view>
+		<!-- 设置推荐招聘 -->
+		<!-- 根据招聘资薪进行一个推荐 -->
+		<view class="hire-recommend-list">
+			<view class="hire-recommend">
+				<view class="hire-recommend-left">
+					<navigator url="../hireCard/hireCard" class="recommend-one">
+						<image src="../../../images/hire-new/aI-engineer.png"></image>
+					</navigator>
+				</view>
+				<view class="recommend-blank-row"></view>
+				<view class="hire-recommend-right">
+					<navigator url="../hireCard/hireCard" class="recommend-two">
+						<image src="../../../images/hire-new/algorithm-engineer.png"></image>
+					</navigator>
+					<view class="recommend-blank-colum"></view>
+					<navigator url="../hireCard/hireCard" class="recommend-three">
+						<image src="../../../images/hire-new/front-end-engineer.png" class=""></image>
+					</navigator>
+				</view>
+			</view>
+		</view>
+		<!-- 设置所有招聘标题 -->
+		<view class="hire-Title">
+			<view class="Chinese-title">今日校招</view>
+			<view class="English-title">Today's enrollment</view>
+		</view>
+		<!-- 今日校招 -->
+		<view class="hire-today">
+			<navigator url="../hireCard/hireCard" hover-class="navigator-hover" class="con-item">
+				<image src="../../../images/hire-new/hire-huawei.jpg" class="actionpic"></image>
+				<view class="clear"></view>
+			</navigator>
+			<navigator url="../hireCard/hireCard" hover-class="navigator-hover" class="con-item">
+				<image src="../../../images/hire-new/hire-tengxun.jpg" class="actionpic"></image>
+				<view class="clear"></view>
+			</navigator>
+			<navigator url="../hireCard/hireCard" hover-class="navigator-hover" class="con-item">
+				<image src="../../../images/hire-new/hire-zhongxing.jpg" class="actionpic"></image>
+				<view class="clear"></view>
+			</navigator>
+			<navigator url="../hireCard/hireCard" hover-class="navigator-hover" class="con-item">
+				<image src="../../../images/hire-new/hire-aili.jpg" class="actionpic"></image>
+				<view class="clear"></view>
+			</navigator>
+		</view>
+		<!-- 底部展示 -->
+		<foot></foot>
+	</view>
+
+</view>

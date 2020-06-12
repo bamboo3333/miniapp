@@ -1,0 +1,272 @@
+/* miniprogram/pages/index/index/index.wxss */
+/* 首页页面设置 */
+page {
+  height: auto;
+  font-family: "Microsoft YaHei";
+  background-color: #F0F0F0;
+  font-size: 25rpx;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 370rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.header image {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.search {
+  /* 设置宽度、长度 */
+  width: 80%;
+  height: 60rpx;
+  border: 2rpx solid #000;
+  border-radius: 20rpx;
+  background-color: aliceblue;
+  /* 设置样式为flex */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.search-icon image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.search-input {
+  width: 95%;
+  height: 60rpx;
+  border-radius: 20rpx;
+  /* 设置输入框与图标之间的距离为2% */
+  margin-left: 2%;
+}
+
+.search-input input {
+  width: 95%;
+  height: 60rpx;
+}
+
+/* 设置招聘类别 */
+.hireType {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* 设置宽度、长度 */
+  width: 100%;
+  height: 160rpx;
+  /* 设置当前view与上一个距离5prpx */
+  margin-top: 5rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+
+.hire-trainee {
+  width: 200rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-trainee image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.hire-fullTime {
+  width: 200rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-fullTime image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.hire-partTimeJob {
+  width: 200rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-partTimeJob image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* 推荐部分 */
+.hire-Title {
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.Chinese-title {
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10rpx;
+}
+
+.English-title {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.hire-recommend-list {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding-bottom: 20rpx;
+  padding-top: 15rpx;
+}
+
+.hire-recommend {
+  width: 100%;
+  margin: 20rpx auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-recommend-left {
+  width: 50%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommend-one {
+  /* float: left; */
+  width: 100%;
+  height: 300rpx;
+}
+
+.recommend-one image {
+  width: 100%;
+  height: 300rpx;
+  margin: 1rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+}
+
+.recommend-blank-row {
+  width: 3%;
+  height: 300%;
+}
+
+.recommend-blank-colum {
+  width: 40%;
+  height: 10rpx;
+}
+
+.hire-recommend-right {
+  width: 40%;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommend-two {
+  width: 100%;
+  height: 145rpx;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.recommend-two image {
+  width: 100%;
+  height: 145rpx;
+  margin: 1rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+}
+
+.recommend-three {
+  width: 100%;
+  height: 145rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommend-three image {
+  width: 100%;
+  height: 145rpx;
+  margin: 1rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+}
+
+.hire-today {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding-bottom: 5rpx;
+  padding-top: 15rpx;
+}
+
+.actionpic{
+  width:98%;
+  height:388rpx;
+  margin-left:1% ;
+  padding:0rpx;
+  border-radius: 36rpx;
+  border:2rpx solid #ccc;
+ }
+
+ 
+.actionpic image{
+  padding: 0rpx;
+  width:98%;
+  height:350rpx;
+  padding:1% 1%;
+  border-radius: 36rpx;
+  border:2rpx solid #ccc;
+ }
+
+ .clear{
+   display: flex;
+   flex-direction: column;
+   height:5rpx;
+   background: white;
+ }
