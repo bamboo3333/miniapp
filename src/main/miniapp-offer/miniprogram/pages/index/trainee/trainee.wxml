@@ -1,0 +1,53 @@
+<view class="container">
+	<view class="page">
+		<view class="title" style="float:left;margin-bottom:15px;">最新招聘</view>
+		<view class="item bdbt">
+			<!-- wx:for="{{courses}}" wx:key="" -->
+			<!-- AL工程师 -->
+			<navigator url="../hireCard/hireCard">
+				<view class="lt">
+					<image src="../../../images/hire-new/aI-engineer.png" />
+				</view>
+				<view class="rt">
+					<view class="price">AI工程师</view>
+					<view class="name">
+						招聘对象:
+						<text class="money">实习生\全职</text>
+					</view>
+					<view class="name">
+						描述:
+						<text class="money">要求掌握....</text>
+					</view>
+					<view style="border:1rpx solid {{color}};color:{{color}};" class="baoming">
+						查看详情
+					</view>
+				</view>
+			</navigator>
+			<view class="line"></view>
+		</view>
+
+		<!-- 算法工程师 -->
+		<view class="item bdbt">
+				<navigator url="../hireCard/hireCard">
+					<view class="lt">
+						<image src="../../../images/hire-new/aI-engineer.png" />
+					</view>
+					<view class="rt">
+						<view class="price">算法工程师</view>
+						<view class="name">
+							招聘对象:
+							<text class="money">实习生\全职</text>
+						</view>
+						<view class="name">
+							描述:
+							<text class="money">要求掌握....</text>
+						</view>
+						<view style="border:1rpx solid {{color}};color:{{color}};" class="baoming">
+							查看详情
+						</view>
+					</view>
+				</navigator>
+				<view class="line"></view>
+			</view>
+		</view>
+	</view>

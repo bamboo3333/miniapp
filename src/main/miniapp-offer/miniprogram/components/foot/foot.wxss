@@ -1,0 +1,9 @@
+/* components/foot/foot.wxss */
+/* 底部展示 */
+.foot{
+  margin: 4rxp;
+  padding: 0rpx;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
