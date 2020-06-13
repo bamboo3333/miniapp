@@ -22,4 +22,24 @@ public class ResumeServiceImpl implements ResumeService {
 
         return resumemodelMapper.queryAllResume(typeId);
     }
+
+    @Override
+    public List<Resumemodel> queryAll() {
+        return resumemodelMapper.queryAll();
+    }
+
+    @Override
+    public Resumemodel queryResumeById(Integer id) {
+        return resumemodelMapper.queryResumeById(id);
+    }
+
+    @Override
+    public void modifyNewsById(Resumemodel resumemodel) {
+        resumemodelMapper.modifyNewsById(resumemodel);
+    }
+
+    @Override
+    public void deleteResumeById(Integer id) {
+        resumemodelMapper.deleteResumeById(id);
+    }
 }

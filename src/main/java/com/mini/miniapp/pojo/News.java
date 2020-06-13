@@ -44,6 +44,16 @@ public class News {
      */
     private String desc;
 
+    private String contact;
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
     /**
      * 工作安排
      */

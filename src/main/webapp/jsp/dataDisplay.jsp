@@ -220,8 +220,7 @@
 </script>
 <script type="text/javascript">
     var posName = [],posNum = [];
-    var color = ['#DD2222','#3FA7DC','#61A0A8','#57C43C','#C4C43C'];
-    var i = 0;
+    var colors = ['#DD2222','#3FA7DC','#61A0A8','#57C43C','#C4C43C'];
     var dom = document.getElementById("job_type");
     var myChart = echarts.init(dom);
     var app = {};
@@ -250,7 +249,7 @@
         },
         series: [
             {
-                name: '访问来源',
+                name: '数量',
                 type: 'pie',
                 radius: ['50%', '70%'],
                 avoidLabelOverlap: false,
@@ -269,9 +268,8 @@
                     show: false
                 },
                 data: [
-                    <c:forEach items="${positions}" var="position">
-                    {value: ${position.value}, name: '${position.key}',itemStyle:{color:color[i]}},
-                    i++,
+                    <c:forEach items="${positions}" var="position" varStatus="status">
+                    {value: ${position.value}, name: '${position.key}',itemStyle:{color:colors[${status.index}]}},
                     </c:forEach>
                 ]
             }

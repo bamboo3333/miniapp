@@ -1,16 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: GuanPa
-  Date: 2020/4/9
-  Time: 22:01
+  Date: 2020/6/12
+  Time: 21:04
   To change this template use File | Settings | File Templates.
 --%>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="../menu.jsp"></jsp:include>
 <html>
 <head>
     <title>modify</title>
+    <script src="/js/jquery-3.3.1.min.js"></script>
     <style>
         @media (min-width: 992px) {
             .modal-lg {
@@ -24,8 +24,8 @@
 
 </head>
 <body>
-<form method="post" action="/news/newsModify.action">
-    <input type="hidden" name="id" value="${newsModify.id}">
+<form method="post" action="/resume/resumeModify.action">
+    <input type="hidden" name="id" value="${resumeModify.id}">
     <div class="modal-dialog modal-lg">
         <div class="modal-content"  id="modal_content">
             <div class="modal-header">
@@ -33,30 +33,26 @@
             </div>
             <div class="modal-body" id = "model-body">
                 <div class="form-group" style="text-align: center">
-                    <label for="typeIdSelect">类型</label>
-                    <select class="form-control" id="typeIdSelect" name="typeId">
+                    <label for="typeIdSelect">使用人群</label>
+                    <select class="form-control" id="typeIdSelect" name="fitCrowd" >
                         <option value="0">实习生</option>
                         <option value="1">全职生</option>
                         <option value="2">招聘生</option>
                     </select>
                 </div>
                 <div class="form-group" style="text-align: center">
-                    <label>标题</label>
-                    <input type="text" name="title" class="form-control"placeholder="信息标题" autocomplete="off" value="${newsModify.title}">
+                    <label for="typeIdSelect">简历类型</label>
+                    <input type="text" name="resumeType" class="form-control"placeholder="简历类型" autocomplete="off" value="${ resumeModify.resumeType }">
                 </div>
                 <div class="form-group" style="text-align: center">
-                    <label >发布者</label>
-                    <input type="text" name="publisher" class="form-control" placeholder="发布者" autocomplete="off" value="${newsModify.publisher}">
+                    <label for="typeIdSelect">样图链接</label>
+                    <input type="text" name="modelImg" class="form-control" placeholder="样图链接" autocomplete="off" value="${ resumeModify.modelImg}">
                 </div>
                 <div class="form-group" style="text-align: center">
-                    <label >内容网址</label>
-                    <input type="text" name="contentUrl" class="form-control"placeholder="内容网址" autocomplete="off" value="${newsModify.contentUrl}">
+                    <label for="typeIdSelect">下载链接</label>
+                    <input type="text" name="modelUrl" class="form-control"placeholder="下载链接" autocomplete="off" value="${ resumeModify.modelUrl}">
                 </div>
-                <div class="form-group" style="text-align: center">
-                    <label >公司logo</label>
-<%--                    <textarea class="form-control" rows="3" autocomplete="off" style="resize: none" name="content">${newsModify.coverImg}</textarea>--%>
-                    <input type="text" name="coverImg" class="form-control" placeholder="logo网址" autocomplete="off" value="${newsModify.coverImg}">
-                </div>
+
             </div>
             <div class="modal-footer">
                 <div class="form-group">
@@ -69,8 +65,9 @@
 </body>
 <script>
     window.onload=function () {
-        $("#typeIdSelect option[ value='${ newsModify.typeId}']").attr("selected", true);
-    }
+        $("#typeIdSelect option[ value='${ resumeModify.fitCrowd}']").attr("selected", true);
+    };
 </script>
 </html>
+
 

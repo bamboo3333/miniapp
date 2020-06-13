@@ -17,6 +17,7 @@
     <result column="job_desc" jdbcType="LONGVARCHAR" property="jobDesc" />
     <result column="job_req" jdbcType="LONGVARCHAR" property="jobReq" />
     <result column="company_desc" jdbcType="LONGVARCHAR" property="companyDesc" />
+    <result column="contact" jdbcType="LONGVARCHAR" property="contact" />
   </resultMap>
   <select id="queryNewsById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from news where id=#{id}
@@ -40,16 +41,18 @@
     select title from news
   </select>
   <insert id="saveNewsByTypeId" parameterType="com.mini.miniapp.pojo.News">
-    insert  into news(type_id,cover_img,title,publisher,`type`,`desc`,work_type,job_desc,job_req,company_desc) values (
+    insert  into news(type_id,cover_img,title,publisher,`type`,`desc`,work_type,job_desc,job_req,company_desc,contact) values (
                       #{typeId},#{coverImg},#{title},#{publisher},
-                      #{type},#{desc},#{workType},#{jobDesc},#{jobReq},#{companyDesc}
+                      #{type},#{desc},#{workType},#{jobDesc},#{jobReq},#{companyDesc},#{contact}
                       )
   </insert>
   <update id="updateNewsById" parameterType="com.mini.miniapp.pojo.News">
     update news set type_id=#{typeId},cover_img=#{coverImg},
                     title=#{title},publisher=#{publisher},
                     `type`=#{type},`desc`=#{desc},work_type=#{workType},
-                    job_desc=#{jobDesc},job_req=#{jobReq},company_desc=#{companyDesc}
+                    job_desc=#{jobDesc},job_req=#{jobReq},company_desc=#{companyDesc},
+                    contact=#{contact}
+
     where id=#{id}
   </update>
   <delete id="deleteNewsById" parameterType="java.lang.Integer">

@@ -35,7 +35,7 @@ public class DataController {
         //获取岗位信息
         List<String> positions = newsService.countPosition();
         //对岗位提取关键词
-        List<String> goals = Arrays.asList("开发","前端","java","python","c++");
+        List<String> goals = Arrays.asList("开发","前端","java","python","c++","后端","Android","ios","算法");
         Map<String,Integer> res = new HashMap();
         for (String p:positions) {
             for (String g:goals){

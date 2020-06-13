@@ -73,6 +73,11 @@
                     <label for="typeIdSelect">公司简介</label>
                     <textarea name="companyDesc" class="form-control" placeholder="公司简介" autocomplete="off">${ newsModify.companyDesc }</textarea>
                 </div>
+                <div class="form-group" style="text-align: center">
+                    <label for="typeIdSelect">联系我们</label>
+                    <textarea name="contact" class="form-control" placeholder="联系我们" autocomplete="off">${ newsModify.contact }</textarea>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <div class="form-group">

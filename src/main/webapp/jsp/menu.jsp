@@ -57,9 +57,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="${ pageContext.request.contextPath }/resume/all.action">简历模板</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/quesLog/all.action">笔试记录</a>
-                    </li>
+<%--                    <li class="nav-item active">--%>
+<%--                        <a class="nav-link" href="${pageContext.request.contextPath}/quesLog/all.action">笔试记录</a>--%>
+<%--                    </li>--%>
 
                 </ul>
             </div>

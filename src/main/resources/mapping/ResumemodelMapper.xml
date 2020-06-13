@@ -14,4 +14,17 @@
   <select id="queryAllResume" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from resumemodel where fit_crowd=#{id}
   </select>
+  <select id="queryAll" resultMap="BaseResultMap">
+    select * from resumemodel
+  </select>
+  <select id="queryResumeById"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from resumemodel where id=#{id}
+  </select>
+  <update id="modifyNewsById" parameterType="com.mini.miniapp.pojo.Resumemodel">
+    update resumemodel set resume_type=#{resumeType},fit_crowd=#{fitCrowd},model_url=#{modelUrl},model_img=#{modelImg}
+    where id=#{id}
+  </update>
+  <delete id="deleteResumeById" parameterType="java.lang.Integer">
+    delete from resumemodel where id=#{id}
+  </delete>
 </mapper>

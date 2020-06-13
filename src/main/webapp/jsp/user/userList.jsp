@@ -44,7 +44,7 @@
         <th class="col-2">头像</th>
         <th class="col-2">用户名</th>
         <th class="col-2">性别</th>
-        <th class="col-2">电话</th>
+        <th class="col-2">地址</th>
         <th class="col-2">操作</th>
     </tr>
     </thead>
@@ -56,7 +56,7 @@
             <td class="col-2"><img src="${user.userAvatar}" class="img1"></td>
             <td class="col-2">${user.userName}</td>
             <td class="col-2">${user.sex}</td>
-            <td class="col-2">${user.phone}</td>
+            <td class="col-2">${user.address}</td>
             <td class="col-2 text-center">
                 <button type="button" class="btn btn-secondary"><a  class="button-a" href="#">详情</a></button>
                 <button type="button" class="btn btn-primary"><a  class="button-a" href="#">修改</a></button>
