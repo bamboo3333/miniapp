@@ -54,8 +54,14 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="${ pageContext.request.contextPath}/user/all.action">用户信息</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="${ pageContext.request.contextPath }/resume/all.action">简历模板</a>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="resumeDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            简历模板
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="resumeDropdownMenuLink">
+                            <a class="dropdown-item" href="${ pageContext.request.contextPath }/jsp/resume/addResume.jsp">新增模板</a>
+                            <a class="dropdown-item" href="${ pageContext.request.contextPath }/resume/all.action">查看模板</a>
+                        </div>
                     </li>
                     <li class="nav-item  dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="trainDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

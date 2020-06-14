@@ -17,4 +17,6 @@ public interface ResumemodelMapper extends MyMapper<Resumemodel> {
     void deleteResumeById(Integer id);
 
     int countNum();
+
+    void resumeSave();
 }

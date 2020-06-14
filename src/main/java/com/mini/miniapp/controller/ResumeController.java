@@ -43,9 +43,14 @@ public class ResumeController {
         resumeService.modifyNewsById(resumemodel);
         return "redirect:/resume/all.action";
     }
-@RequestMapping("/resume/resumeDelete.action")
+    @RequestMapping("/resume/resumeDelete.action")
     public String deleteResumesById(Integer id ){
         resumeService.deleteResumeById(id);
+        return "redirect:/resume/all.action";
+    }
+    @RequestMapping("/resume/resumesave.action")
+    public String save(Resumemodel resumemodel){
+        resumeService.resumeSave(resumemodel);
         return "redirect:/resume/all.action";
     }
 

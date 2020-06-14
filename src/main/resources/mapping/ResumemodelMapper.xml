@@ -23,6 +23,12 @@
   <select id="countNum" resultType="java.lang.Integer">
     select count(*) from resumemodel
   </select>
+
+  <insert id="resumeSave" parameterType="com.mini.miniapp.pojo.Resumemodel">
+    insert into resumemodel(resume_type,fit_crowd,model_url,model_img)values (
+        #{resumeType},#{fitCrowd},#{modelUrl},#{modelImg}
+    )
+  </insert>
   <update id="modifyNewsById" parameterType="com.mini.miniapp.pojo.Resumemodel">
     update resumemodel set resume_type=#{resumeType},fit_crowd=#{fitCrowd},model_url=#{modelUrl},model_img=#{modelImg}
     where id=#{id}

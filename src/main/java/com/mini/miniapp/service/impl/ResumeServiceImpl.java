@@ -47,4 +47,9 @@ public class ResumeServiceImpl implements ResumeService {
     public int countNum() {
         return resumemodelMapper.countNum();
     }
+
+    @Override
+    public void resumeSave(Resumemodel resumemodel) {
+        resumemodelMapper.resumeSave();
+    }
 }

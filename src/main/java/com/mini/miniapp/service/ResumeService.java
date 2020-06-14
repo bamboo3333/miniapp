@@ -20,4 +20,6 @@ public interface ResumeService {
     void deleteResumeById(Integer id);
 
     int countNum();
+
+    void resumeSave(Resumemodel resumemodel);
 }

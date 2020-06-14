@@ -53,19 +53,19 @@ public class WrittentrainController {
     }
 
     @RequestMapping("/train/trainModify.action")
-    public String modifyNewsById(Writtentrain train){
+    public String modifyTrainById(Writtentrain train){
         writtentrainService.modifyTrainById(train);
         return "redirect:/train/info.action";
     }
     @RequestMapping("/train/trainDelete.action")
-    public String deleteNewsById(Integer id){
+    public String deleteTrainById(Integer id){
         writtentrainService.deleteTrainById(id);
         return "redirect:/train/info.action";
     }
 
 
     @RequestMapping("/train/save.action")
-    public String saveNewsTypeId(Writtentrain writtentrain){
+    public String saveTrainTypeId(Writtentrain writtentrain){
         writtentrainService.saveTrain(writtentrain);
         return "redirect:/train/info.action";
     }
