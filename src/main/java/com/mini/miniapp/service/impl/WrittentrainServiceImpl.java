@@ -21,4 +21,30 @@ public class WrittentrainServiceImpl implements WrittentrainService {
     public List<Writtentrain> queryAll() {
         return writtentrainMapper.queryAll();
     }
+
+    @Override
+    public Writtentrain queryTrainById(Integer id) {
+        return writtentrainMapper.queryTrainById(id);
+    }
+
+    @Override
+    public void modifyTrainById(Writtentrain train) {
+        writtentrainMapper.modifyTrainById(train);
+    }
+
+    @Override
+    public void deleteTrainById(Integer id) {
+        writtentrainMapper.deleteTrainById(id);
+    }
+
+    @Override
+    public void saveTrain(Writtentrain writtentrain) {
+        writtentrainMapper.saveTrain(writtentrain);
+    }
+
+    @Override
+    public int countTrainNum() {
+        return writtentrainMapper.countTrainNum();
+    }
+
 }

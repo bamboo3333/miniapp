@@ -21,8 +21,10 @@ public class ResumeController {
     @RequestMapping("/resume/all.action")
     public ModelAndView queryAllResume(){
         List<Resumemodel> resumemodels = resumeService.queryAll();
+        int resumeNum = resumeService.countNum();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("resumeList",resumemodels);
+        modelAndView.addObject("resumeNum",resumeNum);
         modelAndView.setViewName("/resume/resumeList");
         return modelAndView;
     }

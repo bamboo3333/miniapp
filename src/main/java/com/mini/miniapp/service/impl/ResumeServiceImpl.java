@@ -42,4 +42,9 @@ public class ResumeServiceImpl implements ResumeService {
     public void deleteResumeById(Integer id) {
         resumemodelMapper.deleteResumeById(id);
     }
+
+    @Override
+    public int countNum() {
+        return resumemodelMapper.countNum();
+    }
 }

@@ -19,4 +19,31 @@
   <select id="queryAll" resultMap="BaseResultMap">
     select * from writtentrain
   </select>
+  <select id="queryTrainById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select * from writtentrain where id=#{id}
+  </select>
+    <select id="countTrainNum" resultType="java.lang.Integer">
+    select count(*) from writtentrain
+    </select>
+    <insert id="saveTrain" parameterType="com.mini.miniapp.pojo.Writtentrain">
+        insert into `writtentrain` (`title_id`, `title_type`, `title_desc`, `title_url`,
+         `title_name`, `title_time`, `title_exp`, `title_remark`, `title_img`) values (
+            #{titleId},#{titleType},#{titleDesc},#{titleUrl},#{titleName},#{titleTime},
+            #{titleExp},#{titleRemark},#{titleImg}
+        )
+    </insert>
+  <update id="modifyTrainById" parameterType="com.mini.miniapp.pojo.Writtentrain">
+    update writtentrain set `title_id`=#{titleId},
+	`title_type`=#{titleType},
+	`title_desc`=#{titleDesc},
+	`title_url`=#{titleUrl},
+	`title_name`=#{titleName},
+	`title_time`=#{titleTime},
+	`title_exp`=#{titleExp},
+	`title_remark`=#{titleRemark},
+	`title_img`=#{titleImg} where id=#{id}
+  </update>
+    <delete id="deleteTrainById" parameterType="java.lang.Integer">
+        delete from writtentrain where id=#{id}
+    </delete>
 </mapper>

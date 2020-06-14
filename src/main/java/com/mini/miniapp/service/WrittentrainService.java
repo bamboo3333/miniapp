@@ -11,4 +11,14 @@ import java.util.List;
  */
 public interface WrittentrainService {
     List<Writtentrain> queryAll();
+
+    Writtentrain queryTrainById(Integer id);
+
+    void modifyTrainById(Writtentrain train);
+
+    void deleteTrainById(Integer id);
+
+    void saveTrain(Writtentrain writtentrain);
+
+    int countTrainNum();
 }

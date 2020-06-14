@@ -20,6 +20,9 @@
   <select id="queryResumeById"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select * from resumemodel where id=#{id}
   </select>
+  <select id="countNum" resultType="java.lang.Integer">
+    select count(*) from resumemodel
+  </select>
   <update id="modifyNewsById" parameterType="com.mini.miniapp.pojo.Resumemodel">
     update resumemodel set resume_type=#{resumeType},fit_crowd=#{fitCrowd},model_url=#{modelUrl},model_img=#{modelImg}
     where id=#{id}

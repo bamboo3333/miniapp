@@ -73,4 +73,9 @@ public class NewsServiceImpl implements com.mini.miniapp.service.NewsService {
         return newsMapper.countPosition();
     }
 
+    @Override
+    public int countNum() {
+        return newsMapper.countNum();
+    }
+
 }

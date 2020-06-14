@@ -21,4 +21,6 @@ public interface NewsMapper{
     List<JobStatistics> countJobType();
     List<CompanyStatistics> countCompany();
     List<String> countPosition();
+
+    int countNum();
 }

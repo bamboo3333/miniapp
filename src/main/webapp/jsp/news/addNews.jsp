@@ -48,6 +48,15 @@
                     <input type="text" name="publisher" class="form-control" placeholder="发布者" autocomplete="off">
                 </div>
                 <div class="form-group" style="text-align: center">
+                    <label for="typeSelect">特殊指定</label>
+                    <select class="form-control" id="typeSelect" name="typeId">
+                        <option value="0">不指定</option>
+                        <option value="1">今日校招</option>
+                        <option value="2">热门推荐</option>
+                    </select>
+
+                </div>
+                <div class="form-group" style="text-align: center">
                     <label for="typeIdSelect">公司logo</label>
                     <input type="text" name="coverImg" class="form-control"placeholder="logo链接" autocomplete="off">
                 </div>
@@ -82,6 +91,7 @@
                 </div>
             </div>
             <input name="type" hidden="hidden" id="type">
+            <input name="todayNews" hidden="hidden" id="todayNews">
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </form>
@@ -89,16 +99,18 @@
     function getType() {
         //获取select选中的值
         var jobType = $("#typeIdSelect option:selected").val();
-        var type = "";
-        if (jobType==0){
-            type = "实习生";
-        }else if (jobType==1){
-            type = "全职生";
+
+        var todayNews = $("typeSelect option:selected").val();
+        if (todayNews==0){
+            today = "实习生";
+        }else if (todayNews==1){
+            today = "全职生";
         }else {
-            type = "招聘生";
+            today = "招聘生";
         }
         //设置隐藏的type标签的value
         $("#type").val(type);
+        $("#todayNews").val(todayNews);
     }
 </script>
 </body>

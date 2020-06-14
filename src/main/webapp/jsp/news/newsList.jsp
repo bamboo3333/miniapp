@@ -14,13 +14,25 @@
     <script>
         window.onload = function () {
             var types = document.getElementsByClassName("type");
-            for (j=0,length=types.length;j<length;j++){
+            for (var j=0,length=types.length;j<length;j++){
                 if (types[j].innerHTML==0){
                     types[j].innerHTML="实习生";
                 }else if(types[j].innerHTML==1){
                     types[j].innerHTML="全职生";
                 }else {
                     types[j].innerHTML="招聘生";
+                }
+            }
+            var info = document.getElementsByClassName("info");
+            for (var k=0,len=info.length;k<len;k++){
+                console.log(info[k].innerHTML);
+                if(info[k].innerHTML==1){
+                    info[k].innerHTML="(今日招聘)";
+                    info[k].style.color="#09F797"
+                }else if(info[k].innerHTML==2){
+                    info[k].innerHTML="(热门推荐)";
+                }else {
+                    info[k].innerHTML="";
                 }
             }
         };
@@ -37,10 +49,19 @@
             color: white;
             text-align: center;
         }
+        .newsNum{
+            color: white;
+            text-align: center;
+        }
+        .info{
+            font-size: 12px;
+            color: red;
+        }
     </style>
 </head>
 <body>
 <h3>招聘信息列表</h3>
+<h6 class="newsNum">目前信息总数:   <font color="red">${ newsNum }</font></h6>
 <br>
 <table class="table table-hover table-dark table-striped" id="assessStage" data-height="467" data-mobile-responsive="true" style="table-layout: fixed;">
     <thead class="thead-dark w-100 ">
@@ -57,7 +78,7 @@
         <tr class="row mx-0">
             <th class="col-3">${news.id}</th>
             <td class="type col-3">${news.typeId}</td>
-            <td class="col-3">${news.publisher}</td>
+            <td class="col-3">${news.publisher}<span  class="info">${news.todayNews}</span></td>
             <td class="col-3 text-center">
                 <button type="button" class="btn btn-secondary"><a  class="button-a" href="${pageContext.request.contextPath}/news/newsDetails.action?id=${news.id}">详情</a></button>
                 <button type="button" class="btn btn-primary"><a  class="button-a" href="${pageContext.request.contextPath}/news/newsModifyView.action?id=${news.id}">修改</a></button>
@@ -67,5 +88,8 @@
     </c:forEach>
     </tbody>
 </table>
+<script>
+    $(".info")
+</script>
 </body>
 </html>

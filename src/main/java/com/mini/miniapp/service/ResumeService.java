@@ -18,4 +18,6 @@ public interface ResumeService {
     void modifyNewsById(Resumemodel resumemodel);
 
     void deleteResumeById(Integer id);
+
+    int countNum();
 }

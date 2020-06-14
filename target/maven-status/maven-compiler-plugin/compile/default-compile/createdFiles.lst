@@ -27,6 +27,7 @@ com\mini\miniapp\mapper\AdminMapper.class
 com\mini\miniapp\controller\NewsController.class
 com\mini\miniapp\mybatis\utils\GeneratorDisplay.class
 com\mini\miniapp\controller\AdminController.class
+com\mini\miniapp\controller\WrittentrainController.class
 com\mini\miniapp\controller\NewsMiniController.class
 com\mini\miniapp\pojo\News.class
 com\mini\miniapp\pojo\Userinfo.class

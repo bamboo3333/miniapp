@@ -34,4 +34,5 @@ public interface NewsService {
     List<String> countPosition();
 
 
+    int countNum();
 }

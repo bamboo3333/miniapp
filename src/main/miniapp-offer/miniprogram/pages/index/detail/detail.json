@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "foot":"../../../components/foot/foot"
-  },
-  "navigationBarTitleText": "招聘详情",
-  "navigationBarTextStyle": "white"
-}

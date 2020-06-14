@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "foot":"../../../components/foot/foot"
-
-  },
-  "navigationBarTitleText": "简历专制",
-  "navigationBarTextStyle": "white"
-}

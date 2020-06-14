@@ -1,6 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: GuanPa
+  Date: 2020/6/14
+  Time: 9:57
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: GuanPa
   Date: 2020/4/9
   Time: 22:00
   To change this template use File | Settings | File Templates.
@@ -19,12 +26,12 @@
             margin-left: 20px;
         }
         body{
-            background-color: #343A40;
+            background-color: black;
         }
         .btn{
             position: relative;
+            top:160px;
             left: 1300px;
-            bottom: 5px;
         }
     </style>
 </head>
@@ -35,50 +42,37 @@
 <table class="table table-dark">
     <thead>
     <tr>
-        <th class="col-lg-1 text-center"><h2>招聘信息详情</h2></th>
+        <th class="col-lg-1 text-center"><h2>训练题详情</h2></th>
 
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td class="text-center">${ newsDetails.title}</td>
+        <td class="text-center">${ trainDetails.titleType}</td>
     </tr>
     <tr>
-        <td class="text-center">${ newsDetails.publisher}</td>
+        <td class="text-center">${ trainDetails.titleName}</td>
 
     </tr>
     <tr>
         <td class="text-center">
-            ${ newsDetails.type}
+            ${ trainDetails.titleDesc}
         </td>
     </tr>
     <tr>
         <td class="text-center">
-            ${ newsDetails.desc}
+            ${ trainDetails.titleExp}
         </td>
     </tr>
     <tr>
         <td class="text-center">
-            ${ newsDetails.workType}
+            ${ trainDetails.titleRemark}
         </td>
     </tr>
-    <tr>
-        <td class="text-center">
-            ${ newsDetails.jobDesc}
-        </td>
-    </tr>
-    <tr>
-        <td class="text-center">
-            ${ newsDetails.jobReq}
-        </td>
-    </tr>
-    <tr>
-        <td class="text-center">
-            ${ newsDetails.companyDesc}
-        </td>
-    </tr>
+
     </tbody>
 </table>
-<button  type="button" class="btn btn-primary"><a href="${pageContext.request.contextPath}/news/info.action" class="badge badge-primary">返回</a></button>
+<button  type="button" class="btn btn-primary"><a href="${pageContext.request.contextPath}/train/info.action" class="badge badge-primary">返回</a></button>
 </body>
 </html>
+

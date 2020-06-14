@@ -57,9 +57,15 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="${ pageContext.request.contextPath }/resume/all.action">简历模板</a>
                     </li>
-<%--                    <li class="nav-item active">--%>
-<%--                        <a class="nav-link" href="${pageContext.request.contextPath}/quesLog/all.action">笔试记录</a>--%>
-<%--                    </li>--%>
+                    <li class="nav-item  dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="trainDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            笔试训练
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="trainDropdownMenuLink">
+                            <a class="dropdown-item" href="${ pageContext.request.contextPath }/jsp/train/addTrain.jsp">新增题目</a>
+                            <a class="dropdown-item" href="${ pageContext.request.contextPath }/train/info.action">查看题目</a>
+                        </div>
+                    </li>
 
                 </ul>
             </div>

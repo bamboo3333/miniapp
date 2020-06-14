@@ -15,4 +15,6 @@ public interface ResumemodelMapper extends MyMapper<Resumemodel> {
     void modifyNewsById(Resumemodel resumemodel);
 
     void deleteResumeById(Integer id);
+
+    int countNum();
 }

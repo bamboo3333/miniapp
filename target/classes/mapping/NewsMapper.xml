@@ -40,10 +40,13 @@
   <select id="countPosition" resultType="java.lang.String">
     select title from news
   </select>
+  <select id="countNum" resultType="java.lang.Integer">
+    select count(*) from news
+  </select>
   <insert id="saveNewsByTypeId" parameterType="com.mini.miniapp.pojo.News">
-    insert  into news(type_id,cover_img,title,publisher,`type`,`desc`,work_type,job_desc,job_req,company_desc,contact) values (
+    insert  into news(type_id,cover_img,title,publisher,`type`,`desc`,work_type,job_desc,job_req,company_desc,contact,today_news) values (
                       #{typeId},#{coverImg},#{title},#{publisher},
-                      #{type},#{desc},#{workType},#{jobDesc},#{jobReq},#{companyDesc},#{contact}
+                      #{type},#{desc},#{workType},#{jobDesc},#{jobReq},#{companyDesc},#{contact},#{todayNews}
                       )
   </insert>
   <update id="updateNewsById" parameterType="com.mini.miniapp.pojo.News">
@@ -51,7 +54,7 @@
                     title=#{title},publisher=#{publisher},
                     `type`=#{type},`desc`=#{desc},work_type=#{workType},
                     job_desc=#{jobDesc},job_req=#{jobReq},company_desc=#{companyDesc},
-                    contact=#{contact}
+                    contact=#{contact},today_news=#{todayNews}
 
     where id=#{id}
   </update>

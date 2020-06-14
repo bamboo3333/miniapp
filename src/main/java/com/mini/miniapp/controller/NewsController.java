@@ -24,10 +24,12 @@ public class NewsController {
     public ModelAndView queryNewsById(){
         List<News> newsList = newsService.queryAllNews();
         //MINIJSONResult ok = MINIJSONResult.ok(newsList);
+        int newsNum = newsService.countNum();
         //使用ModelAndView设置
         ModelAndView modelAndView = new ModelAndView();
         //添加数据到模型中
         modelAndView.addObject("newsList",newsList);
+        modelAndView.addObject("newsNum",newsNum);
         //添加跳转路径
         //显示jsp/demo2.jsp页面
         modelAndView.setViewName("news/newsList");
